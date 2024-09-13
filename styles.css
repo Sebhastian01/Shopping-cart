@@ -1,0 +1,128 @@
+:root {
+  --yellow: #5fe02c; /* Color amarillo característico de Los Simpsons */
+  --blue: #004D7A;   /* Color azul oscuro de Los Simpsons */
+  --white: #FFFFFF;  /* Color blanco */
+  --grey: #E0E0E0;   /* Color gris claro para el fondo de la card */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--white);
+}
+
+header {
+  background-color: var(--yellow);
+  padding: 20px;
+  text-align: center;
+  position: sticky; /* Hace que el header quede fijo cuando haces scroll */
+  top: 0;           /* Mantiene el header en la parte superior */
+  z-index: 1000;    /* Asegura que el header quede encima del contenido */
+}
+
+header h1 {
+  margin: 0;
+  color: var(--blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003b58;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  overflow-y: auto; /* Habilitar scroll solo en esta sección */
+  max-height: calc(80vh - 60px); /* Limita la altura al espacio entre el header y el footer */
+}
+
+.card {
+  background-color: var(--grey);
+  width: 20rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card button{
+  margin-top: auto;
+}
+
+.card img {
+  width: 60%;
+  height: 50%;
+}
+
+.card-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+}
+
+.card-content p {
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  width: 80%;
+}
+
+.filtros{
+  border: 2px solid;
+  display: flex;
+  height: 4rem;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.filterCategory{
+  height: auto;
+  width: auto;
+}
+
+.filterPrice{
+  height: auto;
+  width: auto;
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 5px;
+}
