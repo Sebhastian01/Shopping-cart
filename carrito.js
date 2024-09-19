@@ -1,22 +1,8 @@
 const numberInput = document.getElementById('numberInput');
+const lista = document.getElementById('lista');
 const containerCards = document.getElementById('cart-items');
 let cantidad = 0;
 
-
-// const btnClear = document.getElementById('btn-clear').addEventListener('click', ()=>{
-//     console.log('carrito borrado');
-    
-//     localStorage.clear();
-    
-// })
-
-// const btnGet = document.getElementById('btn-get').addEventListener('click', ()=>{
-    //     console.log('carrito inciado');
-    
-    //     cartStore()
-    
-    // })
-    
     const cartStore = ()=>{
         let cart = JSON.parse(localStorage.getItem('carrito')) || [];
         // Aquí puedes iterar sobre los productos del carrito y mostrarlos
@@ -32,10 +18,10 @@ let cantidad = 0;
             titleCard.textContent = product.title
             
             const priceCard = document.createElement("p")
-            priceCard.textContent = "$"+product.price
+            priceCard.textContent = "Precio total: $"+product.price*product.cant
 
             const cantCard = document.createElement("p")
-            cantCard.textContent = product.cant
+            cantCard.textContent ="Unidades: " + product.cant
 
             const clearProduct = document.createElement('button')
             clearProduct.textContent='Eliminar'
@@ -54,7 +40,14 @@ let cantidad = 0;
             card.appendChild(cantCard)
             card.appendChild(priceCard)
             card.appendChild(clearProduct)
-            
+
+            const titleElement = document.createElement("li");
+            titleElement.textContent = product.title+": "+ product.cant;
+            lista.appendChild(titleElement);
+
+            cartTotal.textContent= `${cantidad = (product.cant*product.price)+cantidad}`
 });
 }
+
+
 cartStore();
