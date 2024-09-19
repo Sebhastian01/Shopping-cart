@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras de Helados</title>
+<link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+    <header>
+        <h1>TIENDA</h1>
+    </header>
+    
+    <div class="container">
+        <div class="cart">
+            <h2>Carrito de compras</h2>
+            <div id="cart-items">
+                <!-- Los elementos del carrito se agregarán aquí -->
+            </div>
+        </div>
+        <div class="lateral">
+            <div class="total">Total: $<span id="cart-total">0.00</span>
+            </div>
+            <button onclick="checkout()">Finalizar compra</button>
+        <div class="volver">
+            <a href="index.html">Página principal</a>
+            </div>
+        </div>
+    </div>
+    <script src="carrito.js"></script>
+</body>
+</html>

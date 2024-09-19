@@ -13,11 +13,15 @@ body {
 
 header {
   background-color: var(--yellow);
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   position: sticky; /* Hace que el header quede fijo cuando haces scroll */
   top: 0;           /* Mantiene el header en la parte superior */
   z-index: 1000;    /* Asegura que el header quede encima del contenido */
+}
+
+h3{
+font-size: 1rem;
 }
 
 header h1 {
@@ -57,12 +61,12 @@ button:hover {
   gap: 20px;
   justify-content: center;
   overflow-y: auto; /* Habilitar scroll solo en esta sección */
-  max-height: calc(80vh - 60px); /* Limita la altura al espacio entre el header y el footer */
+  max-height: calc(99vh - 200px); /* Limita la altura al espacio entre el header y el footer */
 }
 
 .card {
   background-color: var(--grey);
-  width: 20rem;
+  width: 15rem;
   height: 25rem;
   display: flex;
   flex-direction: column;
@@ -110,6 +114,7 @@ input {
   justify-content: center;
   align-items: center;
   background-color: #333;
+
 }
 
 .filterCategory{
@@ -125,4 +130,14 @@ input {
 input {
   border: 2px solid black;
   border-radius: 5px;
+}
+
+a{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--blue);
+  cursor: pointer;
+  text-decoration: none;
 }
