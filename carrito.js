@@ -5,7 +5,8 @@ let cantidad = 0;
 
     const cartStore = ()=>{
         let cart = JSON.parse(localStorage.getItem('carrito')) || [];
-        // Aquí puedes iterar sobre los productos del carrito y mostrarlos
+      
+        
         cart.forEach(product => {
             const card = document.createElement("div")
             card.classList.add("card")
@@ -26,7 +27,8 @@ let cantidad = 0;
             const clearProduct = document.createElement('button')
             clearProduct.textContent='Eliminar'
             clearProduct.id='clear'
-            // Evento para borrar el producto
+
+
             clearProduct.addEventListener('click', () => {
                 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
                 carrito = carrito.filter(item => item.id !== product.id);

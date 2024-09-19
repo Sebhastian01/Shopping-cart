@@ -1,5 +1,5 @@
 :root {
-  --yellow: #5fe02c; /* Color amarillo característico de Los Simpsons */
+  --yellow: #c7d31c; /* Color amarillo característico de Los Simpsons */
   --blue: #004d7a; /* Color azul oscuro de Los Simpsons */
   --white: #ffffff; /* Color blanco */
   --grey: #e0e0e0; /* Color gris claro para el fondo de la card */
@@ -9,10 +9,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: var(--white);
+  background-color: teal;
 }
 
 header {
-  background-color: var(--yellow);
+  background-color: #c7d31c;
   padding: 20px;
   text-align: center;
   position: sticky; /* Hace que el header quede fijo cuando haces scroll */
@@ -24,7 +25,7 @@ header {
 
 header h1 {
   margin: 0;
-  color: var(--blue);
+  color: #003b58;
 }
 
 main {
@@ -39,8 +40,8 @@ button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  color: var(--white);
-  background-color: var(--blue);
+  color: #ffffff;
+  background-color: #003b58;
   cursor: pointer;
   width: 50%;
 }
@@ -49,8 +50,8 @@ a {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  color: var(--white);
-  background-color: var(--blue);
+  color: #ffffff;
+  background-color: #003b58;
   cursor: pointer;
   text-decoration: none;
 }
@@ -60,7 +61,7 @@ button:hover {
 }
 
 .card {
-  background-color: var(--grey);
+  background-color: #ffffff;
   width: 18rem;
   height: 27rem;
   display: flex;
@@ -92,6 +93,7 @@ button:hover {
 
 #cart-items {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;

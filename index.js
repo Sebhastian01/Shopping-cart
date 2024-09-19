@@ -1,7 +1,5 @@
 const url = "https://fakestoreapi.com/products"
 const containerCards = document.getElementById("cardsContainer")
-const urlCategory ="https://fakestoreapi.com/products/category"
-const urlPrice ="https://fakestoreapi.com/products/price"
 const txtCategory = document.getElementById("search-input-category")
 const txtPrice = document.getElementById("search-input-price")
 
@@ -77,20 +75,11 @@ function showResult(message){
     message = "Producto añadido"
     Swal.fire({
         text: message,
-        timer: 1000,  // 1000 milisegundos = 1 segundo
-        showConfirmButton: false  // Oculta el botón de confirmación
+        timer: 1000,  
+        showConfirmButton: false 
     });
 }
 
-const filterCategory  = async (event) => {
-    containerCards.innerHTML = ""
-    await getCards (urlCategory+event.target.value)
-}
-
-const filterPrice  = async (event) => {
-    containerCards.innerHTML = ""
-    await getCards (urlPrice+event.target.value)
-}
 
 txtCategory.addEventListener("keyup",filterCategory)
 txtPrice.addEventListener("keyup",filterPrice)
