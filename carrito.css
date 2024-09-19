@@ -40,13 +40,13 @@ main {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 10px 30px;
   border: none;
   border-radius: 5px;
   color: #ffffff;
   background-color: #003b58;
   cursor: pointer;
-  width: 50%;
+  width: auto;
 }
 
 a {
